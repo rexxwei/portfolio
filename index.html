@@ -25,13 +25,14 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 </style>
 
 <style>
-.myDiv {
-  padding-top: 1px;
-  padding-right: 5px;
-  /*padding-bottom: 1px;
-  padding-left: 5px;*/
-}
+  .disabled-link {
+    color: gray;
+    cursor: not-allowed;
+    pointer-events: none;
+    text-decoration: none;
+  }
 </style>
+
 
 <head>
 	<script>
@@ -157,33 +158,32 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 					</div>
 					
 					<div class="w3-third w3-container">
-						<a id="chatLink" href="#" target="_blank"><img src="images/chatbot.jpg" alt="ChatBot" style="width:100%; height:100%" class="w3-hover-opacity">
+						<a id="chatLink" href="#" target="_blank" style="text-decoration:none"><img src="images/chatbot.jpg" alt="ChatBot" style="width:100%; height:100%" class="w3-hover-opacity">
 						</a>
 					</div>
 
 					<div class="w3-third w3-container">
-						<a id="healthLink" href="#" target="_blank"><img src="images/health.jpg" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+						<a id="healthLink" href="#" target="_blank" style="text-decoration:none"><img src="images/health.jpg" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
 					</div>
 
 					<div class="w3-third w3-container">
-						<img src="images/search.jpg" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity">
+						<a href="#" target="_blank" class="disabled-link"><img src="images/search.jpg" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity"></a>
 					</div>
  				</div>
  				<br>
 
-				<div class="w3-row-padding"> 
+				<div class="w3-row-padding">
+						<div class="w3-third w3-container">
+							<a href="#" target="_blank" class="disabled-link"><img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+						</div>
 
-					<div class="w3-third w3-container">
-						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
-					</div>
+						<div class="w3-third w3-container">
+							<a href="#" target="_blank" class="disabled-link"><img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+						</div>
 
-					<div class="w3-third w3-container">
-						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
-					</div>
-
-					<div class="w3-third w3-container">
-						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
-					</div>
+						<div class="w3-third w3-container">
+							<a href="#" target="_blank" class="disabled-link"><img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+						</div>
 				</div>
 
 		</div> <!-- End right page content -->
