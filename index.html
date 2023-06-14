@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
 <link href="css/style.css" type="text/css" rel="stylesheet">
-
-<script src="jquery/jquery-latest.js" type="text/javascript"></script>
+<link rel="stylesheet" href="./css/clockstyle.css">
 
 <style>
 	body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -23,6 +22,15 @@
 ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 .main input,select{width:100%;border:1px solid #ccc;margin:3px 0;padding:2px;text-align:center;}input.output{font-weight:bold;font-size:18px;padding:5px 0;border:0;text-align:center}
 #t1{width:100%;}#t2,#t3,#t4,#t5,#t6{display:none;width:100%;height:100%;}
+</style>
+
+<style>
+.myDiv {
+  padding-top: 1px;
+  padding-right: 5px;
+  /*padding-bottom: 1px;
+  padding-left: 5px;*/
+}
 </style>
 
 <head>
@@ -72,11 +80,60 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 	  document.getElementById("ogg_src").src = "https://live-hls-web-aje.getaj.net/AJE/index.m3u8";
 	  document.getElementById("myVideo").load();
 	} 
-	</script> 
+	</script>
+
+	<!-- set the link for project site -->
+<!-- 	<script type="text/javascript">
+		var healthUrl = "http://3.95.210.62:8080";
+		var healthLink = document.getElementById("healthLink");
+		healthLink.href = healthUrl;
+	</script> -->
 	
 </head>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
+
+	<!-- Sidebar -->
+	<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+		<div class="w3-container">
+			<a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+			  <i class="fa fa-remove"></i>
+			</a>
+
+			<!-- Avatar image -->
+			<a href="http://150.136.163.137/rexxwei" target="_blank"><img src="images/avatar.png" style="width:48%;" class="w3-round"></a>
+
+			<!-- Clock -->
+			<div id="clock" align="center"></div>
+	 		<script  src="./script/script.js"></script>
+			
+			<!-- Calendar -->
+			<img src="https://printcal.net/web-calendar.png?size=m&w=s&ho=04&mo=00&so=-1" alt="Printcal.net Calendar Widget" style="width:95%;height:95%"></a>
+			<br>
+			<br>
+
+			<!-- Sidebar YouTube -->
+			<!-- <iframe style="width:95%" src="https://www.youtube.com/embed/5yx6BWlEVcY" title="Chillhop Lofi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+			
+			<!-- Sidebar Search bar -->
+			<div>
+				<span><input type="text" id="sValue" style="width:95%" ></span><br>
+				<!-- <input type="text" id="sValue" style="width:95%" ><br> -->
+				<span><button id="searchBtn" onclick="search()" style="margin-top: 4px;">  &nbsp; Google &nbsp;</div>
+			</div>
+
+			<script>
+				var input = document.getElementById("sValue");
+				input.addEventListener("keypress", function(event) {
+				  if (event.key === "Enter") {
+				    event.preventDefault();
+				    document.getElementById("searchBtn").click();
+				  }
+				});
+			</script>
+			<br><br><br>
+		</div>
+	</nav>
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left:300px">
@@ -89,35 +146,59 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 			<!-- Streaming Section -->
 				<!-- Live 1st Grid -->
 				<div class="w3-row-padding">
-					<h3 style="color:grey">&nbsp;&nbsp;<b>Project Link</b></h3>
+					<h2 style="color:grey">&nbsp;&nbsp;<b>Project List</b></h2>
 					<div class="container" style="padding-left: 15px;">
-					 	<p>
-							Thank you for visiting, below is the link for demo page of Q&A Chatbot project.<br><br>						
-							live page:   
-							<a href="http://44.201.225.139:8080/" target="_blank">Q&A Chatbot project >>></a>
-							<br><br>
+						<p>
+							Thank you for visiting!<br>
+							Below is the link for live page of previous projects.<br>
+							Learn more about me on personal website <a href="http://150.136.163.137/rexxwei" target="_blank"> >>> </a><br>
+							<br>
 						</p>
 					</div>
 					
 					<div class="w3-third w3-container">
-						<a href="http://44.201.225.139:8080/" target="_blank"><img src="images/chatbot.jpg" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+						<a id="chatLink" href="#" target="_blank"><img src="images/chatbot.jpg" alt="ChatBot" style="width:100%; height:100%" class="w3-hover-opacity">
+						</a>
+					</div>
+
+					<div class="w3-third w3-container">
+						<a id="healthLink" href="#" target="_blank"><img src="images/health.jpg" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+					</div>
+
+					<div class="w3-third w3-container">
+						<img src="images/search.jpg" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity">
+					</div>
+ 				</div>
+ 				<br>
+
+				<div class="w3-row-padding"> 
+
+					<div class="w3-third w3-container">
+						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
+					</div>
+
+					<div class="w3-third w3-container">
+						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
+					</div>
+
+					<div class="w3-third w3-container">
+						<img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity">
 					</div>
 				</div>
-				<br>
-
-				<!-- <div class="w3-row-padding">
-					<div class="container" style="padding-left: 15px;">
-					 	<p>
-							Video demo
-							<br>
-						</p><br>
-						<iframe src="https://www.youtube.com/embed/_Im4_3Z1NxQ" width="720" height="405" title="video demo" allowfullscreen=""></iframe>
-					</div>
-				</div> -->
 
 		</div> <!-- End right page content -->
 		<br>
 	</div> <!-- End !PAGE CONTENT! -->
+
+	<script type="text/javascript">
+		var cahtUrl = "http://44.206.228.174:8080";
+		var healthUrl = "http://3.95.210.62:8080";
+
+		var chathLink = document.getElementById("chatLink");
+		chatLink.href = cahtUrl;
+		var healthLink = document.getElementById("healthLink");
+		healthLink.href = healthUrl;
+	</script>
 
 </body>
 </html>
