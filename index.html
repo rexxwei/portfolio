@@ -152,33 +152,34 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 						<p>
 							Thank you for visiting!<br>
 							Below is the link for live page of previous projects.<br>
-							Learn more about me on personal website <a href="https://rexxwei.github.io/aboutme/" target="_blank"> >>> </a><br>
+							Learn more about me on personal website <a href="https://rexxwei.github.io/aboutme/" target="_blank"> >>👨‍🎓 </a><br>
 							<br>
 						</p>
 					</div>
 					
 					<div class="w3-third w3-container">
-						<a id="chatLink" href="#" target="_blank" style="text-decoration:none"><img src="images/chatbot.png" alt="ChatBot" style="width:100%; height:100%" class="w3-hover-opacity">
-						</a>
+						<a id="elkLink" href="#" target="_blank" style="text-decoration:none"><img src="images/search.png" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+					</div>
+
+					<div class="w3-third w3-container">
+							<a id="movieLink" href="#" target="_blank" style="text-decoration:none"><img src="images/movie.png" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity"></a>
 					</div>
 
 					<div class="w3-third w3-container">
 						<a id="healthLink" href="#" target="_blank" style="text-decoration:none"><img src="images/health.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
 					</div>
 
-					<div class="w3-third w3-container">
-						<a id="elkLink" href="#" target="_blank" style="text-decoration:none"><img src="images/search.png" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity"></a>
-					</div>
  				</div>
  				<br>
 
 				<div class="w3-row-padding">
 						<div class="w3-third w3-container">
-							<a id="movieLink" href="#" target="_blank" style="text-decoration:none"><img src="images/movie.png" alt="SearchEngine" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+							<a id="chatLink" href="#" target="_blank" style="text-decoration:none"><img src="images/chatbot.png" alt="ChatBot" style="width:100%; height:100%" 	class="w3-hover-opacity">
+							</a>
 						</div>
 
 						<div class="w3-third w3-container">
-							<a href="#" target="_blank" class="disabled-link"><img src="images/project.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
+							<a id="openaiLink" href="#" target="_blank" style="text-decoration:none"><img src="images/openai.png" alt="HealthPredict" style="width:100%; height:100%" class="w3-hover-opacity"></a>
 						</div>
 
 						<div class="w3-third w3-container">
@@ -193,8 +194,9 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 	<script type="text/javascript">
 		var chatUrl = "http://54.235.238.101:8080";
 		var healthUrl = "http://54.87.240.51:8080";
-		var elkUrl = "http://3.83.2.250";
+		var elkUrl = "http://3.83.2.250"；
 		var movieUrl = "http://54.87.240.51:5000";
+		var openaiUrl = "http://54.87.240.51:5000";
 
 		var chatLink = document.getElementById("chatLink");
 		chatLink.href = chatUrl;
@@ -204,6 +206,8 @@ ul{padding:0 0 5px 5px;list-style:none}li{line-height:16px}
 		elkLink.href = elkUrl;
 		var movieLink = document.getElementById("movieLink");
 		movieLink.href = movieUrl;
+		var openaiLink = document.getElementById("openaiLink");
+		openaiLink.href = openaiUrl;
 	</script>
 
 </body>
