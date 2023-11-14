@@ -8,19 +8,20 @@
 	padding:0;
 }
 body{
-	font-family: 'Droid Sans', arial, serif;
+	font-family: 'Droid Serif', arial, serif;
 	background:#ffffff;
 	color:#1d1d1d;
 }
 h1,h2,h3,h4,h5,h6{
 	display:block;
 	font-family: 'Droid Serif', arial, serif;
-	color:#2d2d2d;
+	/* color:#0D0BC4; */
 }
 h1{
-	font-size:18px;
-	border-top:1px solid #dddddd;
+	font-size:30px;
+	border-top:0px solid #dddddd;
 	padding:5px;
+	color:#0D0BC4;
 }
 h2{
 	font-size:16px;
